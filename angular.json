@@ -30,7 +30,7 @@
             ],
             "security": {
               "allowedHosts": []
-            },
+            }
           },
           "configurations": {
             "production": {
