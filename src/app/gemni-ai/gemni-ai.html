@@ -1,0 +1,59 @@
+<!-- <input type="text" placeholder="Ask Gemni AI..."  #userQuestionInput/>
+<button (click)="chatWithAi(userQuestionInput.value)">Ask</button>
+<br>
+
+Bajrangi : {{aiResponse}} -->
+
+<div class="chat-wrapper">
+
+  <!-- HEADER -->
+  <div class="header">
+    🤖 Gemini AI
+  </div>
+
+  <!-- CHAT AREA -->
+  <div class="chat-box" #scrollBox>
+
+    <div *ngFor="let msg of messages" class="msg-container">
+
+      <!-- USER -->
+      <div *ngIf="msg.role === 'user'" class="msg user">
+        <div class="name">{{ msg.name }}</div>
+        <div class="bubble">{{ msg.text }}</div>
+      </div>
+
+      <!-- AI -->
+      <div *ngIf="msg.role === 'ai'" class="msg ai">
+        <div class="name">{{ msg.name }}</div>
+        <div class="bubble">{{ msg.text }}</div>
+      </div>
+
+      <!-- TYPING -->
+      <div *ngIf="msg.role === 'typing'" class="msg ai typing">
+        <div class="name">Gemini AI</div>
+        <div class="bubble">
+          Thinking<span>.</span><span>.</span><span>.</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- INPUT -->
+  <div class="input-area">
+
+    <input
+      type="text"
+      #userQuestionInput
+      placeholder="Message Gemini AI..."
+      (keyup.enter)="chatWithAi(userQuestionInput.value); userQuestionInput.value=''"
+    />
+
+    <button (click)="chatWithAi(userQuestionInput.value); userQuestionInput.value=''">
+      ➤
+    </button>
+
+  </div>
+
+</div>
