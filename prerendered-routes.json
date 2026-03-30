@@ -1,6 +1,6 @@
 {
   "routes": {
-    "/": {},
-    "/chat": {}
+    "/Ai_form_submition": {},
+    "/Ai_form_submition/chat": {}
   }
 }

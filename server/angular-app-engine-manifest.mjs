@@ -1,6 +1,6 @@
 
 export default {
-  basePath: '/',
+  basePath: '/Ai_form_submition',
   allowedHosts: [],
   supportedLocales: {
   "en-US": ""
